@@ -13,7 +13,7 @@ public class Users {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
     private String name;
     private String email;
     private String password;
@@ -26,7 +26,7 @@ public class Users {
     @LastModifiedBy
     private String uptadeAt;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
