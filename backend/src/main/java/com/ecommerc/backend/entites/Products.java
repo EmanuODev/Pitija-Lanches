@@ -13,20 +13,19 @@ public class Products {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
     private String name;
-    private String descripption;
+    private String description;
     @Enumerated(EnumType.STRING)
     private ProductCategory category;
-    private Float price;
-    private String imageUrl;
+    private float price;
 
     @CreatedDate
     private LocalDateTime createdAt;
     @LastModifiedBy
     private LocalDateTime updatedAt;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
@@ -34,20 +33,16 @@ public class Products {
         return name;
     }
 
-    public String getDescripption() {
-        return descripption;
+    public String getDescription() {
+        return description;
     }
 
     public ProductCategory getCategory() {
         return category;
     }
 
-    public Float getPrice() {
+    public float getPrice() {
         return price;
-    }
-
-    public String getImageUrl() {
-        return imageUrl;
     }
 
     public LocalDateTime getCreatedAt() {
@@ -66,8 +61,8 @@ public class Products {
         this.name = name;
     }
 
-    public void setDescripption(String descripption) {
-        this.descripption = descripption;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public void setCategory(ProductCategory category) {
@@ -76,10 +71,6 @@ public class Products {
 
     public void setPrice(Float price) {
         this.price = price;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
     }
 
     public void setCreatedAt(LocalDateTime createdAt) {
