@@ -16,14 +16,16 @@ public class Products {
     private long id;
     private String name;
     private String description;
+    private String image_url;
     @Enumerated(EnumType.STRING)
     private ProductCategory category;
     private float price;
+    private int stock;
 
     @CreatedDate
-    private LocalDateTime createdAt;
+    private LocalDateTime created_at;
     @LastModifiedBy
-    private LocalDateTime updatedAt;
+    private LocalDateTime updated_at;
 
     public long getId() {
         return id;
@@ -45,15 +47,7 @@ public class Products {
         return price;
     }
 
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public LocalDateTime getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -69,16 +63,40 @@ public class Products {
         this.category = category;
     }
 
-    public void setPrice(Float price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
+    public LocalDateTime getCreated_at() {
+        return created_at;
     }
 
-    public void setUpdatedAt(LocalDateTime updatedAt) {
-        this.updatedAt = updatedAt;
+    public void setCreated_at(LocalDateTime created_at) {
+        this.created_at = created_at;
+    }
+
+    public LocalDateTime getUpdated_at() {
+        return updated_at;
+    }
+
+    public void setUpdated_at(LocalDateTime updated_at) {
+        this.updated_at = updated_at;
+    }
+
+    public String getImage_url() {
+        return image_url;
+    }
+
+    public void setImage_url(String image_url) {
+        this.image_url = image_url;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
     }
 
 }
