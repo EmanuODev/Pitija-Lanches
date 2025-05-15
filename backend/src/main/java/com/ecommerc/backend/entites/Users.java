@@ -22,9 +22,9 @@ public class Users {
     private Roles role;
 
     @CreatedDate
-    private LocalDateTime createdAt;
+    private LocalDateTime created_at;
     @LastModifiedBy
-    private String uptadeAt;
+    private String updated_at;
 
     public long getId() {
         return id;
@@ -50,15 +50,7 @@ public class Users {
         return phone;
     }
 
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public String getUptadeAt() {
-        return uptadeAt;
-    }
-
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -82,12 +74,19 @@ public class Users {
         this.phone = phone;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
+    public LocalDateTime getCreated_at() {
+        return created_at;
     }
 
-    public void setUptadeAt(String uptadeAt) {
-        this.uptadeAt = uptadeAt;
+    public void setCreated_at(LocalDateTime created_at) {
+        this.created_at = created_at;
     }
 
+    public String getUpdated_at() {
+        return updated_at;
+    }
+
+    public void setUpdated_at(String updated_at) {
+        this.updated_at = updated_at;
+    }
 }

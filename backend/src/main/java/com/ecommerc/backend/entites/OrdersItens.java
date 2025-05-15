@@ -14,18 +14,18 @@ public class OrdersItens {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @ManyToOne
-    @JoinColumn(name = "orders_id")
+    @JoinColumn(name = "order_id")
     private Orders order;
     @ManyToOne
-    @JoinColumn(name = "products_variations_id")
-    private ProductsVariations item;
+    @JoinColumn(name = "product_id")
+    private Products item;
     private int quantity;
     private float subtotal;
 
     @CreatedDate
-    private LocalDateTime createdAt;
+    private LocalDateTime created_at;
     @LastModifiedBy
-    private LocalDateTime updatedAt;
+    private LocalDateTime updated_at;
 
     public long getId() {
         return id;
@@ -43,11 +43,11 @@ public class OrdersItens {
         this.order = order;
     }
 
-    public ProductsVariations getItem() {
+    public Products getItem() {
         return item;
     }
 
-    public void setItem(ProductsVariations item) {
+    public void setItem(Products item) {
         this.item = item;
     }
 
@@ -67,19 +67,19 @@ public class OrdersItens {
         this.subtotal = subtotal;
     }
 
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
+    public LocalDateTime getCreated_at() {
+        return created_at;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
+    public void setCreated_at(LocalDateTime created_at) {
+        this.created_at = created_at;
     }
 
-    public LocalDateTime getUpdatedAt() {
-        return updatedAt;
+    public LocalDateTime getUpdated_at() {
+        return updated_at;
     }
 
-    public void setUpdatedAt(LocalDateTime updatedAt) {
-        this.updatedAt = updatedAt;
+    public void setUpdated_at(LocalDateTime updated_at) {
+        this.updated_at = updated_at;
     }
 }

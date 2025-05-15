@@ -16,16 +16,16 @@ public class Orders {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @ManyToOne
-    @JoinColumn(name = "users_id")
+    @JoinColumn(name = "user_id")
     private Users user;
-    private float totalPrice;
+    private float total_price;
     private StatusOrders status;
-    private PaymentMethod paymentMethod;
+    private PaymentMethod payment_method;
 
     @CreatedDate
-    private LocalDateTime createdAt;
+    private LocalDateTime created_at;
     @LastModifiedBy
-    private LocalDateTime updatedAt;
+    private LocalDateTime updated_at;
 
     public long getId() {
         return id;
@@ -43,12 +43,20 @@ public class Orders {
         this.user = user;
     }
 
-    public float getTotalPrice() {
-        return totalPrice;
+    public float getTotal_price() {
+        return total_price;
     }
 
-    public void setTotalPrice(float totalPrice) {
-        this.totalPrice = totalPrice;
+    public void setTotal_price(float total_price) {
+        this.total_price = total_price;
+    }
+
+    public PaymentMethod getPayment_method() {
+        return payment_method;
+    }
+
+    public void setPayment_method(PaymentMethod payment_method) {
+        this.payment_method = payment_method;
     }
 
     public StatusOrders getStatus() {
@@ -59,28 +67,19 @@ public class Orders {
         this.status = status;
     }
 
-    public PaymentMethod getPaymentMethod() {
-        return paymentMethod;
+    public LocalDateTime getCreated_at() {
+        return created_at;
     }
 
-    public void setPaymentMethod(PaymentMethod paymentMethod) {
-        this.paymentMethod = paymentMethod;
+    public void setCreated_at(LocalDateTime created_at) {
+        this.created_at = created_at;
     }
 
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
+    public LocalDateTime getUpdated_at() {
+        return updated_at;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
+    public void setUpdated_at(LocalDateTime updated_at) {
+        this.updated_at = updated_at;
     }
-
-    public LocalDateTime getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(LocalDateTime updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
 }
