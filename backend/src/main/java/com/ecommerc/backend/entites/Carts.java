@@ -1,6 +1,10 @@
 package com.ecommerc.backend.entites;
 
 import jakarta.persistence.*;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedBy;
+
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "carts")
@@ -10,13 +14,18 @@ public class Carts {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @ManyToOne
-    @JoinColumn(name = "users_id")
+    @JoinColumn(name = "user_id")
     private Users user;
     @ManyToOne
-    @JoinColumn(name = "products_variations_id")
-    private ProductsVariations item;
+    @JoinColumn(name = "product_id")
+    private Products item;
     private int quantity;
     private float subtotal;
+
+    @CreatedDate
+    private LocalDateTime created_at;
+    @LastModifiedBy
+    private LocalDateTime updated_at;
 
     public long getId() {
         return id;
@@ -34,11 +43,11 @@ public class Carts {
         this.user = user;
     }
 
-    public ProductsVariations getItem() {
+    public Products getItem() {
         return item;
     }
 
-    public void setItem(ProductsVariations item) {
+    public void setItem(Products item) {
         this.item = item;
     }
 
@@ -56,5 +65,21 @@ public class Carts {
 
     public void setSubtotal(float subtotal) {
         this.subtotal = subtotal;
+    }
+
+    public LocalDateTime getCreated_at() {
+        return created_at;
+    }
+
+    public void setCreated_at(LocalDateTime created_at) {
+        this.created_at = created_at;
+    }
+
+    public LocalDateTime getUpdated_at() {
+        return updated_at;
+    }
+
+    public void setUpdated_at(LocalDateTime updated_at) {
+        this.updated_at = updated_at;
     }
 }
