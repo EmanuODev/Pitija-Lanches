@@ -2,6 +2,8 @@ package com.ecommerc.backend.entites;
 
 import com.ecommerc.backend.enuns.Roles;
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 
@@ -21,9 +23,9 @@ public class Users {
     @Enumerated(EnumType.STRING)
     private Roles role;
 
-    @CreatedDate
+    @CreationTimestamp
     private LocalDateTime created_at;
-    @LastModifiedBy
+    @UpdateTimestamp
     private LocalDateTime updated_at;
 
     public long getId() {
