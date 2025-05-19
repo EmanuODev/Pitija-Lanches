@@ -2,6 +2,8 @@ package com.ecommerc.backend.entites;
 
 import com.ecommerc.backend.enuns.ProductCategory;
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 
@@ -22,9 +24,9 @@ public class Products {
     private float price;
     private int stock;
 
-    @CreatedDate
+    @CreationTimestamp
     private LocalDateTime created_at;
-    @LastModifiedBy
+    @UpdateTimestamp
     private LocalDateTime updated_at;
 
     public long getId() {
