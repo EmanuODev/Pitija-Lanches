@@ -1,6 +1,8 @@
 package com.ecommerc.backend.entites;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 
@@ -22,9 +24,9 @@ public class Carts {
     private int quantity;
     private float subtotal;
 
-    @CreatedDate
+    @CreationTimestamp
     private LocalDateTime created_at;
-    @LastModifiedBy
+    @UpdateTimestamp
     private LocalDateTime updated_at;
 
     public long getId() {
