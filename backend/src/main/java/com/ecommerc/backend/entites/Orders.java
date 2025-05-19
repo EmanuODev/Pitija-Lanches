@@ -3,6 +3,8 @@ package com.ecommerc.backend.entites;
 import com.ecommerc.backend.enuns.PaymentMethod;
 import com.ecommerc.backend.enuns.StatusOrders;
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 
@@ -19,12 +21,14 @@ public class Orders {
     @JoinColumn(name = "user_id")
     private Users user;
     private float total_price;
+    @Enumerated(EnumType.STRING)
     private StatusOrders status;
+    @Enumerated(EnumType.STRING)
     private PaymentMethod payment_method;
 
-    @CreatedDate
+    @CreationTimestamp
     private LocalDateTime created_at;
-    @LastModifiedBy
+    @UpdateTimestamp
     private LocalDateTime updated_at;
 
     public long getId() {
