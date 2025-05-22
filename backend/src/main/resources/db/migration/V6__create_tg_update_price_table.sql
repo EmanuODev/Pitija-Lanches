@@ -7,6 +7,6 @@ BEGIN
 
     UPDATE orders
     SET orders.total_price = orders.total_price + NEW.subtotal
-    WHERE orders.id = NEW.product_id;
+    WHERE orders.id = NEW.order_id;
 
 END
