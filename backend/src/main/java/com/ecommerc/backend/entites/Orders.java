@@ -5,8 +5,6 @@ import com.ecommerc.backend.enuns.StatusOrders;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedBy;
 
 import java.time.LocalDateTime;
 
@@ -22,7 +20,7 @@ public class Orders {
     private Users user;
     private float total_price;
     @Enumerated(EnumType.STRING)
-    private StatusOrders status;
+    private StatusOrders status = StatusOrders.IN_PROGRESS;
     @Enumerated(EnumType.STRING)
     private PaymentMethod payment_method;
 

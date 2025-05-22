@@ -5,6 +5,6 @@ public enum ProductCategory {
     DRINKS,
     HAMBURGER,
     SALTY,
-    SWEET
+    SUGARY
 
 }
