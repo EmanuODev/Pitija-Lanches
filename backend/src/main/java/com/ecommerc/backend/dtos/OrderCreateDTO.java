@@ -5,8 +5,6 @@ import com.ecommerc.backend.enuns.StatusOrders;
 
 public record OrderCreateDTO(
         long user_id,
-        float total_price,
-        StatusOrders status,
         PaymentMethod payment_method
 ) { }
 
