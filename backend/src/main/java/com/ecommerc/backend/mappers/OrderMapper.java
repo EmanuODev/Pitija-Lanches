@@ -1,7 +1,7 @@
 package com.ecommerc.backend.mappers;
 
-import com.ecommerc.backend.dtos.OrderCreateDTO;
-import com.ecommerc.backend.dtos.OrderResponseDTO;
+import com.ecommerc.backend.dtos.order.OrderCreateDTO;
+import com.ecommerc.backend.dtos.order.OrderResponseDTO;
 import com.ecommerc.backend.entites.Orders;
 import com.ecommerc.backend.entites.Users;
 

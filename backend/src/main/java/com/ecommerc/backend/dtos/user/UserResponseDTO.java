@@ -1,4 +1,4 @@
-package com.ecommerc.backend.dtos;
+package com.ecommerc.backend.dtos.user;
 
 import com.ecommerc.backend.enuns.Roles;
 

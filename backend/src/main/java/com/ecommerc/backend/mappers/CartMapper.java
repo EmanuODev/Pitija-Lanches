@@ -1,8 +1,8 @@
 package com.ecommerc.backend.mappers;
 
-import com.ecommerc.backend.dtos.CartCreateDTO;
-import com.ecommerc.backend.dtos.CartResponseDTO;
-import com.ecommerc.backend.dtos.CartShowDTO;
+import com.ecommerc.backend.dtos.cart.CartCreateDTO;
+import com.ecommerc.backend.dtos.cart.CartResponseDTO;
+import com.ecommerc.backend.dtos.cart.CartShowDTO;
 import com.ecommerc.backend.entites.Carts;
 import com.ecommerc.backend.entites.Products;
 import com.ecommerc.backend.entites.Users;

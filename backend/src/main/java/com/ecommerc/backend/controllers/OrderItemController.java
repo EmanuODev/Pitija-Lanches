@@ -1,7 +1,7 @@
 package com.ecommerc.backend.controllers;
 
-import com.ecommerc.backend.dtos.OrderItemCreateDTO;
-import com.ecommerc.backend.dtos.OrderItemResponseDTO;
+import com.ecommerc.backend.dtos.order_item.OrderItemCreateDTO;
+import com.ecommerc.backend.dtos.order_item.OrderItemResponseDTO;
 import com.ecommerc.backend.services.OrderItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

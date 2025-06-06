@@ -1,7 +1,7 @@
 package com.ecommerc.backend.mappers;
 
-import com.ecommerc.backend.dtos.OrderItemCreateDTO;
-import com.ecommerc.backend.dtos.OrderItemResponseDTO;
+import com.ecommerc.backend.dtos.order_item.OrderItemCreateDTO;
+import com.ecommerc.backend.dtos.order_item.OrderItemResponseDTO;
 import com.ecommerc.backend.entites.Orders;
 import com.ecommerc.backend.entites.OrdersItens;
 import com.ecommerc.backend.entites.Products;

@@ -1,10 +1,11 @@
-package com.ecommerc.backend.dtos.order;
+package com.ecommerc.backend.dtos.order_item;
 
-import com.ecommerc.backend.dtos.order_item.OrderItemResponseDTO;
+import com.ecommerc.backend.dtos.order.OrderResponseDTO;
 
 import java.util.List;
 
-public record OrderShowDTO(
+public record OrderItensShowDTO(
     OrderResponseDTO order,
-    List<OrderItemResponseDTO> itens
+    List<OrderItemResponseDTO> itens,
+    int qtd_itens
 ) { }

@@ -1,7 +1,11 @@
 package com.ecommerc.backend.services;
 
 import com.ecommerc.backend.dtos.*;
-import com.ecommerc.backend.entites.Orders;
+import com.ecommerc.backend.dtos.cart.CartJsonDTO;
+import com.ecommerc.backend.dtos.cart.CartShowDTO;
+import com.ecommerc.backend.dtos.order.OrderCreateDTO;
+import com.ecommerc.backend.dtos.order.OrderResponseDTO;
+import com.ecommerc.backend.dtos.order_item.OrderItemCreateDTO;
 import com.ecommerc.backend.enuns.PaymentMethod;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -18,6 +22,8 @@ public class CartOrderService {
 
     public MessageDTO createOrderDeleteCart(long user_id, int payment_method_id){
 
+        if(payment_method_id < 0 || payment_method_id > 2)
+            return new MessageDTO("Payment_method_id está fora do range");
 
         CartJsonDTO cartJson = cartService.showCartById(user_id);
 

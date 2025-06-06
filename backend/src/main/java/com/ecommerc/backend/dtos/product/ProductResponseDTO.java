@@ -1,4 +1,4 @@
-package com.ecommerc.backend.dtos;
+package com.ecommerc.backend.dtos.product;
 
 import com.ecommerc.backend.enuns.ProductCategory;
 
