@@ -1,4 +1,6 @@
-package com.ecommerc.backend.dtos;
+package com.ecommerc.backend.dtos.cart;
+
+import com.ecommerc.backend.dtos.user.UserResponseDTO;
 
 import java.util.List;
 
