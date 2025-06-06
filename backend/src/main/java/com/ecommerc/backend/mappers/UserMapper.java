@@ -1,8 +1,8 @@
 package com.ecommerc.backend.mappers;
 
 
-import com.ecommerc.backend.dtos.UserCreateDTO;
-import com.ecommerc.backend.dtos.UserResponseDTO;
+import com.ecommerc.backend.dtos.user.UserCreateDTO;
+import com.ecommerc.backend.dtos.user.UserResponseDTO;
 import com.ecommerc.backend.entites.Users;
 
 public class UserMapper {
