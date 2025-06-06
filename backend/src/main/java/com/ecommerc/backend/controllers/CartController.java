@@ -1,16 +1,14 @@
 package com.ecommerc.backend.controllers;
 
 import com.ecommerc.backend.dtos.*;
-import com.ecommerc.backend.entites.Carts;
-import com.ecommerc.backend.entites.Orders;
+import com.ecommerc.backend.dtos.cart.CartCreateDTO;
+import com.ecommerc.backend.dtos.cart.CartJsonDTO;
+import com.ecommerc.backend.dtos.cart.CartResponseDTO;
 import com.ecommerc.backend.services.CartService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.HashMap;
-import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
@@ -39,5 +37,7 @@ public class CartController {
     public ResponseEntity<CartJsonDTO> showCartById(@PathVariable long user_id){
         return new ResponseEntity<>(cartService.showCartById(user_id), HttpStatus.OK);
     }
+
+
 
 }
