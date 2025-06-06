@@ -7,8 +7,10 @@ export function Router () {
     return (
 
         <Routes>
-            <Route path="/" element={<Pages.Home/>}></Route>
             <Route path="/*" element={<Pages.NotFound />}></Route>
+            <Route path="/inicio" element={<Pages.Home/>}></Route>
+            <Route path="/cadastrar-produto" element={<Pages.CreateProduct/>}></Route>
+            <Route path="/meus-pedidos" element={<Pages.Orders/>}></Route>
         </Routes>
         
     )
