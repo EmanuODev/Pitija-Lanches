@@ -1,8 +1,9 @@
 package com.ecommerc.backend.controllers;
 
 
-import com.ecommerc.backend.dtos.OrderCreateDTO;
-import com.ecommerc.backend.dtos.OrderResponseDTO;
+import com.ecommerc.backend.dtos.order.OrderCreateDTO;
+import com.ecommerc.backend.dtos.order.OrderJsonDTO;
+import com.ecommerc.backend.dtos.order.OrderResponseDTO;
 import com.ecommerc.backend.services.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -21,6 +22,11 @@ public class OrderController {
 
         return new ResponseEntity<>(orderService.saveOrder(orderDTO), HttpStatus.CREATED);
 
+    }
+
+    @GetMapping("/all/{user_id}")
+    public ResponseEntity<OrderJsonDTO> showOrdersByUserId(@PathVariable long user_id) {
+        return new ResponseEntity<>(orderService.showOrderByUser(user_id), HttpStatus.OK);
     }
 
 }
