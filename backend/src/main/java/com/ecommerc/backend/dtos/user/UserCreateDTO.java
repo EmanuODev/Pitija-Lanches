@@ -1,4 +1,4 @@
-package com.ecommerc.backend.dtos;
+package com.ecommerc.backend.dtos.user;
 
 public record UserCreateDTO(
         String name,
