@@ -1,7 +1,7 @@
 package com.ecommerc.backend.mappers;
 
-import com.ecommerc.backend.dtos.ProductCreateDTO;
-import com.ecommerc.backend.dtos.ProductResponseDTO;
+import com.ecommerc.backend.dtos.product.ProductCreateDTO;
+import com.ecommerc.backend.dtos.product.ProductResponseDTO;
 import com.ecommerc.backend.entites.Products;
 
 public class ProductMapper {
