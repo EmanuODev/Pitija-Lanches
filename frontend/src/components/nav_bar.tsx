@@ -36,11 +36,16 @@ export function NavBar ( props: NavBarProps ) {
                 <Filter setFilterOptions={props.setFilterOptions} filterOptions={props.filterOptions}></Filter>
             </div>
 
-            <input type="search" onChange={(e) => {props.handleSearch(e.target.value)}} className="h-12 mt-5 w-[25rem] px-4 rounded-xl outline-none border-2 border-[#D32F2F] placeholder:text-[#884c38] text-[#884c38] placeholder:text-opacity-50" placeholder="Busque aqui"/>
+            <div className="flex items-center gap-12">
 
-            <div className="flex items-center gap-10 mt-5">
-                <Tooltip title="Cadastrar produto" arrow><button onClick={() => navigate('/cadastrar-produto')} className="h-12 w-12 bg-[#D32F2F] rounded-xl flex items-center justify-center shadow-[0px_2px_1px_2px_rgba(0,0,0,0.2)]"><FaPlus className="text-[#FFF3E0]"/></button></Tooltip>
+                <input type="search" onChange={(e) => {props.handleSearch(e.target.value)}} className="h-12 mt-5 w-[25rem] px-4 rounded-xl outline-none border-2 border-[#D32F2F] placeholder:text-[#884c38] text-[#884c38] placeholder:text-opacity-50" placeholder="Busque aqui"/>
+
+                <div className="flex items-center gap-10 mt-5">
+                    <Tooltip title="Cadastrar produto" arrow><button onClick={() => navigate('/cadastrar-produto')} className="h-12 w-12 bg-[#D32F2F] rounded-xl flex items-center justify-center shadow-[0px_2px_1px_2px_rgba(0,0,0,0.2)]"><FaPlus className="text-[#FFF3E0]"/></button></Tooltip>
+                </div>
+
             </div>
+
 
         </div>
     )
