@@ -92,7 +92,7 @@ export function Home () {
             <Header></Header>
 
             {products && 
-                <div className="h-full px-[10rem] lg:px-[14rem] 2xl:px-[16rem] pt-16">
+                <div className="h-full px-[10rem] lg:px-[14rem] 2xl:px-[7rem] pt-16">
 
                     <NavBar handleSearch={handleSearch} setFilterOptions={setFilterOptions} filterOptions={filterOptions}></NavBar>
 
