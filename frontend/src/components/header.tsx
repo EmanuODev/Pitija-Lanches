@@ -1,7 +1,6 @@
 import { FaClipboardList, FaShoppingCart } from "react-icons/fa";
 import { FaCircleUser } from "react-icons/fa6";
 import { ButtonNav } from "./button_nav";
-import { TittleNav } from "./tittle_nav";
 import Tooltip from '@mui/material/Tooltip';
 import { useNavigate } from "react-router-dom";
 import urlFoto from '../../public/logo.svg'
@@ -23,7 +22,7 @@ export function Header () {
             </button>
             <div className="gap-x-14 flex items-center">
                 <Tooltip title="Meus Pedidos" arrow><ButtonNav url="/meus-pedidos"><FaClipboardList /></ButtonNav></Tooltip>
-                <Tooltip title="Meu Carrinho" arrow><ButtonNav url="/inicio"><FaShoppingCart/></ButtonNav></Tooltip>
+                <Tooltip title="Meu Carrinho" arrow><ButtonNav url="/meu-carrinho"><FaShoppingCart/></ButtonNav></Tooltip>
                 <Tooltip title="Configurações do Usuário" arrow><ButtonNav url="/inicio"><FaCircleUser /></ButtonNav></Tooltip>
             </div>
         </nav>

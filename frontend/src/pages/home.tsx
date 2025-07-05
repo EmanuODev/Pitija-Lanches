@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { api } from "../api";
 import { DivProducts } from "../components/div_products";
 import { Header } from "../components/header";
+import { ToastContainer } from "react-toastify";
 
 type productProps = {
 
@@ -108,6 +109,8 @@ export function Home () {
                 
                 </div>
             }
+
+            <ToastContainer/>
         </div>
 
     );

@@ -1,7 +1,6 @@
 import type { ComponentProps } from "react";
 import { TittleBody } from "./tittle_body";
 import { ViewProduct } from "./view_product";
-import { motion } from "framer-motion";
 
 type productProps = {
 
@@ -25,12 +24,14 @@ interface ProductsCategoryProps extends ComponentProps<'div'> {
 
 export function ProductsCategory ( props: ProductsCategoryProps ) {
 
+    const user_id =  Number(localStorage.getItem('user_id'))
+
     return (
-        <div className="flex flex-col pb-14">
+        <div className="flex flex-col pb-20">
             <TittleBody className="pb-6">{props.children}</TittleBody>
             <div className="grid grid-cols-2 2xl:grid-cols-4 w-full" >
                 {props.products.map((product) =>
-                    <ViewProduct photo={props.imageUrl} price={product.price} name={product.name} product_id={product.id} className="col-span-1"></ViewProduct> 
+                    <ViewProduct key={product.id} user_id={user_id} photo={props.imageUrl} price={product.price} name={product.name} product_id={product.id} className="col-span-1"></ViewProduct> 
                 )}
             </div>
         </div>

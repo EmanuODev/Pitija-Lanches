@@ -15,6 +15,12 @@ public interface CartsRepository extends JpaRepository<Carts, Long> {
     @Query(value = ("SELECT * FROM carts WHERE user_id = :user_id"), nativeQuery = true)
     List<Carts> findAllCartsById(long user_id);
 
+    @Query(value = ("SELECT * FROM carts WHERE user_id = :user_id AND product_id = :product_id"), nativeQuery = true)
+    Carts findItemCartByUserId(long user_id, long product_id);
+
+    @Query(value = ("SELECT COUNT(*) AS size FROM carts WHERE user_id = :user_id AND product_id = :product_id"), nativeQuery = true)
+    int countProductCartByUser(long user_id, long product_id);
+
     @Transactional
     @Modifying
     @Query(value = ("DELETE FROM carts WHERE user_id = :user_id"), nativeQuery = true)
