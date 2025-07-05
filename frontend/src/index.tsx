@@ -1,3 +1,4 @@
+import { Cart } from "./pages/cart"
 import { CreateProduct } from "./pages/create_product."
 import { Home } from "./pages/home"
 import { NotFound } from "./pages/not_found"
@@ -9,5 +10,6 @@ export const Pages = {
     Home,
     CreateProduct,
     Orders,
+    Cart
 
 }

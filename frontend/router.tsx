@@ -11,6 +11,7 @@ export function Router () {
             <Route path="/inicio" element={<Pages.Home/>}></Route>
             <Route path="/cadastrar-produto" element={<Pages.CreateProduct/>}></Route>
             <Route path="/meus-pedidos" element={<Pages.Orders/>}></Route>
+            <Route path="/meu-carrinho" element={<Pages.Cart/>}></Route>
         </Routes>
         
     )

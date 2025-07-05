@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { ProductsCategory } from "./products_category"
 
 type productProps = {
@@ -41,13 +40,13 @@ export function DivProducts( props: productsJsonProps ) {
 
         <div>
 
-            { (props.products.hamburgers.length > 0 && (props.filterOptions[0].checkbox || EveryFalse()) ) && <ProductsCategory imageUrl="../../public/foto_hamburger.png" products={props.products.hamburgers}>Hamburguers</ProductsCategory>}
+            { (props.products.hamburgers.length > 0 && (props.filterOptions[0].checkbox || EveryFalse()) ) && <ProductsCategory imageUrl="/foto_hamburger.png" products={props.products.hamburgers}>Hambúrguers</ProductsCategory>}
             
-            { (props.products.salty.length > 0 && (props.filterOptions[1].checkbox || EveryFalse()) ) && <ProductsCategory imageUrl="../../public/coxinha.png" products={props.products.salty}>Salgados</ProductsCategory>}
+            { (props.products.salty.length > 0 && (props.filterOptions[1].checkbox || EveryFalse()) ) && <ProductsCategory imageUrl="/coxinha.png" products={props.products.salty}>Salgados</ProductsCategory>}
     
-            { (props.products.sugary.length > 0 && (props.filterOptions[2].checkbox || EveryFalse()) ) && <ProductsCategory imageUrl="../../public/bolo.png" products={props.products.sugary}>Doces</ProductsCategory>}
+            { (props.products.sugary.length > 0 && (props.filterOptions[2].checkbox || EveryFalse()) ) && <ProductsCategory imageUrl="/bolo.png" products={props.products.sugary}>Doces</ProductsCategory>}
     
-            { (props.products.drinks.length > 0 && (props.filterOptions[3].checkbox || EveryFalse()) ) && <ProductsCategory imageUrl="../../public/limoneto.png" products={props.products.drinks}>Bebidas</ProductsCategory>}
+            { (props.products.drinks.length > 0 && (props.filterOptions[3].checkbox || EveryFalse()) ) && <ProductsCategory imageUrl="/limoneto.png" products={props.products.drinks}>Bebidas</ProductsCategory>}
 
         </div>
 

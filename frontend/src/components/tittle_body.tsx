@@ -2,7 +2,7 @@ import type { ComponentProps } from "react";
 import { twMerge } from "tailwind-merge";
 
 interface TittleBodyProps extends ComponentProps<'h1'> {
-    children: string
+    children: string | string []
 }
 
 export function TittleBody(props: TittleBodyProps) {

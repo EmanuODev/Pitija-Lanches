@@ -14,7 +14,10 @@ public interface OrdersItensRepository extends JpaRepository<OrdersItens, Long> 
     @Query(value = ("SELECT * FROM orders_itens WHERE order_id = :order_id"), nativeQuery = true)
     List<OrdersItens> findOrdersItensByOrder(long order_id);
 
-    @Query(value = ("SELECT COUNT(*) FROM orders_itens WHERE order_id = :order_id"), nativeQuery = true)
+    @Query(value = ("SELECT SUM(quantity) FROM orders_itens WHERE order_id = :order_id"), nativeQuery = true)
     int countOrdersItensByOrder(long order_id);
+
+//    @Query(value = ("SELECT COUNT(*) AS size FROM orders_itens WHERE order_id = :order_id AND product_id = :product_id"), nativeQuery = true)
+//    int countOrdersItens(long order_id, long product_id);
 
 }

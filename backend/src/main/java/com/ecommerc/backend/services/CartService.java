@@ -37,6 +37,16 @@ public class CartService {
 
         float subtotal = price * cart.getQuantity();
 
+        if(cartsRepository.countProductCartByUser(user_id, product_id) > 0) {
+
+            Carts oldItem = cartsRepository.findItemCartByUserId(user_id, product_id);
+            oldItem.setQuantity(oldItem.getQuantity() + cartDTO.quantity());
+            oldItem.setSubtotal(oldItem.getSubtotal() + subtotal);
+
+            return CartMapper.toDTO(cartsRepository.save(oldItem));
+
+        }
+
         cart.setSubtotal(subtotal);
 
         return CartMapper.toDTO(cartsRepository.save(cart));
